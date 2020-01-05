@@ -1,0 +1,72 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements
+\usepackage[margin=24mm]{geometry}
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\captionsetup[figure]{font=small}
+
+%\addtolength{\topmargin}{-8mm}
+%\addtolength{\textheight}{8mm}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\lstset{
+		language=Matlab,
+    %basicstyle=\color{red},
+    breaklines=true,
+    %morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},
+    morekeywords=[2]{1},
+		keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false, %without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},
+		emphstyle=[1]\color{red} %some words to emphasise
+    %emph=[2]{word1,word2},
+		%emphstyle=[2]{style},
+}
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{LaTeX Document Template}
+\author{Daniel Eisen}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+
+\section{Section}
+$\alpha$
+\subsection{Subsection}
+\subsubsection{subsubsection}
+
+%----------------------------------------------------------------------------------------
+%	APPENDIX
+%----------------------------------------------------------------------------------------
+\newpage
+\section*{Appendix}
+\end{document}
