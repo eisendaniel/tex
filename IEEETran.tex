@@ -1,19 +1,29 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-\documentclass[11pt]{IEEEtran}
+\documentclass[journal]{IEEEtran}
 \usepackage{amsmath} % Required for some math elements
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{lipsum} 
+\usepackage{cite}
 \usepackage{graphicx} % Required for the inclusion of images
-\usepackage{setspace}
-\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
-\setlength\parindent{1pt} % Removes all indentation from paragraphs
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{bookmark}
 
+\interdisplaylinepenalty=2500 %Note that the amsmath package sets \interdisplaylinepenalty to 10000 thus preventing page breaks from occurring within multiline equations. Use: \interdisplaylinepenalty=2500 after loading amsmath to restore such page breaks as IEEEtran.cls normally does
+
+\hypersetup{ %color attributes of citation, link, etc.
+    colorlinks=orange,
+    linkcolor=cyan,
+    filecolor=gray,      
+    urlcolor=cyan,
+    citecolor=cyan,
+}
 %----------------------------------------------------------------------------------------
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
-
 \title{{\LaTeX} IEEE Template}
 \author{Daniel Eisen}
 \date{\today}
@@ -23,14 +33,30 @@
 %----------------------------------------------------------------------------------------
 %	DOCUMENT CONTENT
 %----------------------------------------------------------------------------------------
+\begin{abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+\end{IEEEkeywords}
+
+\section{Introduction}
+  \IEEEPARstart{T}{his} document is an example of BibTeX using in bibliography management. 
+  Three items are cited: \textit{The \LaTeX\Companion} book \cite{latexcompanion}, the Einstein journal paper \cite{einstein}, 
+  and the Donald Knuth's website \cite{knuthwebsite}. The \LaTeX\ related items are \cite{latexcompanion, einstein, knuthwebsite}. 
+
 \section{Section}
-Ths document is an example of BibTeX using in bibliography management. Three items 
-are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion}, the Einstein
-journal paper \cite{einstein}, and the Donald Knuth's website \cite{knuthwebsite}. 
-The \LaTeX\ related items are \cite{latexcompanion, einstein, knuthwebsite}. 
+
+\section{Conclusion}
+
+\appendices
+    \section{Appendix Section Header}
+        Appendix one text goes here.
+
+    \section{}
+
+\section*{Acknowledgment}
 
 \newpage
-\nocite{*}
 \bibliography{ref}
 \bibliographystyle{IEEEtran}
 \end{document}
