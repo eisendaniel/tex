@@ -17,6 +17,11 @@
 \usepackage{enumitem}
 \usepackage[margin=24mm]{geometry}
 \usepackage[caption=false, font=footnotesize]{subfig}
+\usepackage{multirow}
+\usepackage[active,tightpage]{preview}
+
+\renewcommand{\PreviewBorder}{1in}
+\newcommand{\Newpage}{\end{preview}\begin{preview}}
 
 \newlist{steps}{enumerate}{1}
 \setlist[steps, 1]{label = Step \arabic*:}
@@ -43,6 +48,7 @@
 \date{\today}
 
 \begin{document}
+\begin{preview}
 \maketitle
 %----------------------------------------------------------------------------------------
 %	DOCUMENT CONTENT
@@ -67,4 +73,5 @@
 \section*{Question 2}
 
 \end{enumerate}
+\end{preview}
 \end{document}
